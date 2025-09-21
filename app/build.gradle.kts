@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "cn.a10miaomiao.bilimiao.scanner"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "cn.a10miaomiao.bilimiao.scanner"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
