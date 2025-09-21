@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.king.view.viewfinderview.ViewfinderView
+        android:id="@+id/viewfinderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:vvLaserStyle="grid"
+        app:vvLabelTextLocation="bottom" />
+
+    <ImageView
+        android:id="@+id/ivFlashlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/camera_scan_flashlight_margin_top"
+        android:contentDescription="@null"
+        android:src="@drawable/camera_scan_flashlight_selector" />
+
+    <RelativeLayout
+        android:id="@+id/rlPermissionTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_gravity="center"
+        android:background="@drawable/permission_tips_background"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvPermissionTipsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提示"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvPermissionTipsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPermissionTipsTitle"
+            android:text="请前往应用设置授予相机权限"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPermissionTipsSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPermissionTipsContent"
+            android:layout_alignParentEnd="true"
+            android:text="去设置" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPermissionTipsCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPermissionTipsContent"
+            android:layout_toStartOf="@id/btnPermissionTipsSettings"
+            android:text="不扫了"
+            android:layout_marginEnd="8dp"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
